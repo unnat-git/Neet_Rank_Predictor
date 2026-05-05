@@ -8,7 +8,7 @@ def load_my_model():
 
 model = load_my_model()
 
-st.title("🎓 NEET-UG Rank Predictor")
+st.title("🩺 NEET-UG Rank Predictor")
 marks = st.number_input("Marks", min_value=300, max_value=720, value=650)
 year = st.selectbox("Year", [2025, 2026])
 
