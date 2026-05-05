@@ -9,7 +9,7 @@ def load_my_model():
 model = load_my_model()
 
 st.title("🎓 NEET-UG Rank Predictor")
-marks = st.number_input("Marks", 0, 720, 650)
+marks = st.number_input("Marks", min_value=300, max_value=720, value=650)
 year = st.selectbox("Year", [2025, 2026])
 
 if st.button("Predict"):
