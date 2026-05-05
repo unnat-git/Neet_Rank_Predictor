@@ -11,7 +11,25 @@ model = load_my_model()
 st.title("🩺 NEET-UG Rank Predictor")
 marks = st.number_input("Marks", min_value=300, max_value=720, value=650)
 year = st.selectbox("Year", [2025, 2026])
-
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #e63946;
+        color: white;
+        border-radius: 8px;
+        height: 3em;
+        width: 100%;
+        font-weight: 600;
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #c1121f;
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 if st.button("Predict"):
     if marks==720:
         st.success("Predicted Rank: 1")
