@@ -20,3 +20,16 @@ if st.button("Predict"):
         pred_log = model.predict(input_data)[0]
         final_rank = np.exp(pred_log) - 1
         st.success(f"Predicted Rank: {max(1, int(final_rank))}")
+st.markdown(
+    """
+    <hr style="margin-top:50px;">
+    <div style="text-align:center; font-size:14px; color:gray;">
+        Built with ❤️ by Unnat  
+        <br>
+        <span style="font-size:12px;">
+        ⚠️ Demo ML model — predictions are not official and may be inaccurate.
+        </span>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
